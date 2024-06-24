@@ -66,7 +66,7 @@ def render_mjx_rollout(
     render_every: int = 2,
     seed: int = 0,
     width: int = 320,
-    height: int = 240
+    height: int = 240,
 ) -> np.ndarray:
     """Rollout a trajectory using MuJoCo and render it.
 
@@ -76,6 +76,8 @@ def render_mjx_rollout(
         n_steps: Number of steps to rollout
         render_every: Render every nth step
         seed: Random seed
+        width: width of rendered frame in pixels
+        height: height of rendered frame in pixels
 
     Returns:
         A list of renderings of the policy rollout with dimensions (T, H, W, C)
@@ -93,7 +95,7 @@ def render_mujoco_rollout(
     render_every: int = 2,
     seed: int = 0,
     width: int = 320,
-    height: int = 240
+    height: int = 240,
 ) -> np.ndarray:
     """Rollout a trajectory using MuJoCo.
 
@@ -103,6 +105,8 @@ def render_mujoco_rollout(
         n_steps: Number of steps to rollout
         render_every: Render every nth step
         seed: Random seed
+        width: width of rendered frame in pixels
+        height: height of rendered frame in pixels
 
     Returns:
         A list of images of the policy rollout (T, H, W, C)
